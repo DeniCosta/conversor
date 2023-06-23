@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Convert.io</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>Convert.io: Simplifique suas conversões de unidades</h1>
+            <p>Com apenas alguns cliques, você pode converter de forma eficiente diferentes categorias de unidade de
+                medidas, como: comprimento, peso e temperatura.</p>
+            <p>Simplifique sua vida e obtenha resultados precisos em instantes.</p>
+        </div>
+        <form action="">
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="comprimento">Comprimento</option>
+                <option value="peso">Peso</option>
+                <option value="temperatura">Temperatura</option>
+            </select>
+
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" required>
+
+            <label for="origem">De:</label>
+            <select id="origem" required>
+                <option value="">Unidade de origem</option>
+            </select>
+
+            <label for="destino">Para:</label>
+            <select id="destino" required>
+                <option value="">Unidade de destino</option>
+            </select>
+
+            <button type="submit">Converter</button>
+
+            <div>
+              <h3><span>Resultado: </span> </h3>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+
+</html>
