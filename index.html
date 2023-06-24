@@ -11,43 +11,133 @@
 
 <body>
     <main>
-        <div>
-            <h1>Convert.io: Simplifique suas conversões de unidades</h1>
-            <p>Com apenas alguns cliques, você pode converter de forma eficiente diferentes categorias de unidade de
-                medidas, como: comprimento, peso e temperatura.</p>
-            <p>Simplifique sua vida e obtenha resultados precisos em instantes.</p>
+        <!-- título e subtítulo -->
+        <div class="title-wrapper">
+            <h1 class="titulo">Convert.io: Simplifique suas conversões de unidades</h1>
+            <p class="subtitulo">Com apenas alguns cliques, você pode converter de forma eficiente diferentes categorias de unidade de medidas.</p>
         </div>
-        <form action="">
 
-            <label for="categoria">Categoria:</label>
-            <select id="categoria" required>
-                <option value="">Selecione uma categoria</option>
-                <option value="comprimento">Comprimento</option>
-                <option value="peso">Peso</option>
-                <option value="temperatura">Temperatura</option>
-            </select>
+        <div class="categorias">
+            <!-- Card da categoria comprimento -->
+            <section class="card-container">
+                <div class="card-content">
+                    <div class="card-title">
+                        <img class="ilustracao" src="./assets/ruler.png" alt="régua">
+                        <h3>Comprimento</h3>
+                    </div>
+                    <form id="form-comprimento">
+                        <div class="campo">
+                            <label for="valor">Informe o valor:</label>
+                            <input type="number" id="valor-comprimento" required>
+                        </div>
+                        <div class="campo">
+                            <select id="origem-comprimento" required>
+                                <option value="">Unidade de Origem</option>
+                                <option value="metros">Metros</option>
+                                <option value="centimetros">Centímetros</option>
+                                <option value="polegadas">Polegadas</option>
+                            </select>
 
-            <label for="valor">Valor:</label>
-            <input type="number" id="valor" required>
+                            <select id="destino-comprimento" required>
+                                <option value="">Unidade de destino</option>
+                                <option value="metros">Metros</option>
+                                <option value="centimetros">Centímetros</option>
+                                <option value="polegadas">Polegadas</option>
+                            </select>
+                        </div>
 
-            <label for="origem">De:</label>
-            <select id="origem" required>
-                <option value="">Unidade de origem</option>
-            </select>
+                        <button class="botao" id="botao-comprimento" type="submit">Converter</button>
 
-            <label for="destino">Para:</label>
-            <select id="destino" required>
-                <option value="">Unidade de destino</option>
-            </select>
+                    </form>
+                    <div class="campo">
+                        <h3>Resultado: <span id="resultado-comprimento" class="resultado">resultado</span>
+                        </h3>
+                    </div>
+                </div>
+            </section>
 
-            <button type="submit">Converter</button>
+            <!-- Card da categoria Peso -->
+            <section class="card-container">
+                <div class="card-content">
+                    <div class="card-title">
+                        <img class="ilustracao" src="./assets/weighing-machine.png" alt="balança de pesos">
+                        <h3>Peso</h3>
+                    </div>
+                    <form id="form-peso">
+                        <div class="campo">
+                            <label for="valor">Informe o valor:</label>
+                            <input type="number" id="valor-peso" required>
+                        </div>
+                        <div class="campo">
+                            <select id="origem-peso" required>
+                                <option value="">Unidade de Origem</option>
+                                <option value="quilogramas">Quilogramas</option>
+                                <option value="gramas">Gramas</option>
+                                <option value="libras">Libras</option>
+                            </select>
 
-            <div>
-              <h3><span>Resultado: </span> </h3>
-            </div>
+                            <select id="destino-peso" required>
+                                <option value="">Unidade de destino</option>
+                                <option value="quilogramas">Quilogramas</option>
+                                <option value="gramas">Gramas</option>
+                                <option value="libras">Libras</option>
+                            </select>
+                        </div>
 
-        </form>
+                        <button class="botao" id="botao-peso" type="submit">Converter</button>
+
+                    </form>
+                    <div class="campo">
+                        <h3>Resultado: <span id="resultado-peso"class="resultado">resultado</span>
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card da categoria temperatura -->
+            <section class="card-container">
+                <div class="card-content">
+                    <div class="card-title">
+                        <img class="ilustracao" src="./assets/thermometer.png" alt="termômetro">
+                        <h3>Temperatura</h3>
+                    </div>
+                    <form id="form-temperatura">
+                        <div class="campo">
+                            <label for="valor">Informe o valor:</label>
+                            <input type="number" id="valor-temperatura" required>
+                        </div>
+                        <div class="campo">
+                            <select id="origem-temperatura" required>
+                                <option value="">Unidade de Origem</option>
+                                <option value="celsius">Celsius</option>
+                                <option value="fahrenheit">Fahrenheit</option>
+                                <option value="kelvin">Kelvin</option>
+                            </select>
+
+                            <select id="destino-temperatura" required>
+                                <option value="">Unidade de destino</option>
+                                <option value="celsius">Celsius</option>
+                                <option value="fahrenheit">Fahrenheit</option>
+                                <option value="kelvin">Kelvin</option>
+                            </select>
+                        </div>
+
+                        <button class="botao" id="botao-temperatura" type="submit">Converter</button>
+
+                    </form>
+                    <div class="campo">
+                        <h3>Resultado: <span id="resultado-temperatura"class="resultado">resultado</span>
+                        </h3>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <!-- Rodapé -->
+    <footer>
+        By Denise Costa
+    </footer>
 
 </body>
 
