@@ -2,7 +2,6 @@
 function converterComprimento(event) {
     event.preventDefault();
 
-    const formulario = document.getElementById('form-comprimento');
     const valorInput = document.getElementById('valor-comprimento').value;
     const origemSelect = document.getElementById('origem-comprimento');
     const destinoSelect = document.getElementById('destino-comprimento');
@@ -59,7 +58,8 @@ function converterComprimento(event) {
         }
 
         resultadoSpan.textContent = resultado.toFixed(2);
-        
+
+
     } else {
         alert('Erro: Preencha todos os campos.');
     }
@@ -69,7 +69,7 @@ function converterComprimento(event) {
 function converterPeso(event) {
     event.preventDefault();
 
-    const formulario = document.getElementById('form-peso');
+
     const valorInput = document.getElementById('valor-peso').value;
     const origemSelect = document.getElementById('origem-peso');
     const destinoSelect = document.getElementById('destino-peso');
@@ -126,7 +126,7 @@ function converterPeso(event) {
         }
 
         resultadoSpan.textContent = resultado.toFixed(2);
-        
+
     } else {
         alert('Erro: Preencha todos os campos.');
     }
@@ -136,7 +136,7 @@ function converterPeso(event) {
 function converterTemperatura(event) {
     event.preventDefault();
 
-    const formulario = document.getElementById('form-temperatura');
+
     const valorInput = document.getElementById('valor-temperatura').value;
     const origemSelect = document.getElementById('origem-temperatura');
     const destinoSelect = document.getElementById('destino-temperatura');
@@ -190,20 +190,32 @@ function converterTemperatura(event) {
         }
 
         resultadoSpan.textContent = resultado.toFixed(2);
-        
+
     } else {
         alert('Erro: Preencha todos os campos.');
     }
 }
 
-
-
 // Evento de envio do formulário para a categoria de comprimento
 document.getElementById('botao-comprimento').addEventListener('click', converterComprimento);
-
+// Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
+document.getElementById('botao-comprimento').addEventListener('blur', function () {
+    document.getElementById('form-comprimento').reset();
+    document.getElementById('resultado-comprimento').textContent="0.00";
+});
 
 // Evento de envio do formulário para a categoria de peso
 document.getElementById('botao-peso').addEventListener('click', converterPeso);
+// Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
+document.getElementById('botao-peso').addEventListener('blur', function () {
+    document.getElementById('form-peso').reset();
+    document.getElementById('resultado-peso').textContent="0.00";
+});
 
 // Evento de envio do formulário para a categoria de temperatura
 document.getElementById('botao-temperatura').addEventListener('click', converterTemperatura);
+// Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
+document.getElementById('botao-temperatura').addEventListener('blur', function () {
+    document.getElementById('form-temperatura').reset();
+    document.getElementById('resultado-temperatura').textContent="0.00";
+});
