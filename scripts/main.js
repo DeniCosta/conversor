@@ -1,3 +1,25 @@
+// Função para atualizar dinamicamente as opções de destino com base na origem selecionada
+
+function atualizarOpcoes(origemId, destinoId) {
+    const origemSelect = document.getElementById(origemId);
+    const destinoSelect = document.getElementById(destinoId);
+
+    const origemIndex = origemSelect.selectedIndex;
+    const origemValue = origemSelect.options[origemIndex].value;
+
+    const opcoesDestino = destinoSelect.options;
+
+    for (let i = 0; i < opcoesDestino.length; i++) {
+        const opcao = opcoesDestino[i];
+        if (opcao.value === origemValue || opcao.value === '') {
+            opcao.style.display = 'none'; // Oculta opções indesejadas e a opção padrão
+        } else {
+            opcao.style.display = 'inline'; // Exibe opções desejadas
+        }
+    }
+}
+
+
 // Função para conversão de comprimento
 function converterComprimento(event) {
     event.preventDefault();
@@ -196,12 +218,23 @@ function converterTemperatura(event) {
     }
 }
 
+//Captura o evento "change" para alterar dinamicamente as opções
+document.addEventListener('change', function () {
+    atualizarOpcoes('origem-comprimento', 'destino-comprimento');
+    atualizarOpcoes('destino-comprimento', 'origem-comprimento');
+    atualizarOpcoes('origem-peso', 'destino-peso');
+    atualizarOpcoes('destino-peso', 'origem-peso');
+    atualizarOpcoes('origem-temperatura', 'destino-temperatura');
+    atualizarOpcoes('destino-temperatura', 'origem-temperatura');
+});
+
 // Evento de envio do formulário para a categoria de comprimento
 document.getElementById('botao-comprimento').addEventListener('click', converterComprimento);
-// Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
+
+// Limpa os campos do formulário e o resultado quando ocorrer o evento blur (clicar fora do elemento)
 document.getElementById('botao-comprimento').addEventListener('blur', function () {
     document.getElementById('form-comprimento').reset();
-    document.getElementById('resultado-comprimento').textContent="0.00";
+    document.getElementById('resultado-comprimento').textContent = "0.00";
 });
 
 // Evento de envio do formulário para a categoria de peso
@@ -209,7 +242,7 @@ document.getElementById('botao-peso').addEventListener('click', converterPeso);
 // Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
 document.getElementById('botao-peso').addEventListener('blur', function () {
     document.getElementById('form-peso').reset();
-    document.getElementById('resultado-peso').textContent="0.00";
+    document.getElementById('resultado-peso').textContent = "0.00";
 });
 
 // Evento de envio do formulário para a categoria de temperatura
@@ -217,5 +250,5 @@ document.getElementById('botao-temperatura').addEventListener('click', converter
 // Limpa os campos do formulário e o resultatdo quando ocorrer o evento blur (clicar fora do elemento)
 document.getElementById('botao-temperatura').addEventListener('blur', function () {
     document.getElementById('form-temperatura').reset();
-    document.getElementById('resultado-temperatura').textContent="0.00";
+    document.getElementById('resultado-temperatura').textContent = "0.00";
 });
