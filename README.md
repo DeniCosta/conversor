@@ -13,7 +13,7 @@ JavaScript
 # Como Executar
 Para executar o Convert.io em seu ambiente local, siga estas etapas:
 1. Clone este repositório para o seu computador: 
-```git clone https://github.com/DeniCosta/conversor.git```
+```git clone https://github.com/DeniCosta/convert.io.git```
 2. Abra o arquivo index.html em seu navegador web.
 
 Agora você pode usar o Convert.io para converter unidades de comprimento, peso e temperatura.<br><br>
