@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
 
 * {
@@ -8,12 +9,15 @@
     text-decoration: none;
 }
 
+
+/* Gradiente do Background */
 body {
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-repeat: no-repeat;
 }
 
-
-.title-wrapper {
+/* título principal */
+.titulo-principal {
     max-width: 60vw;
     height: auto;
     margin: 0 auto;
@@ -24,15 +28,19 @@ body {
     padding: 20px 0 0px 0;
 }
 
+/* Parágrafos */
 p {
     font-size: 20px;
 }
 
+/* Container dos formulários das categorias */
 .categorias {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
+/* Container de cada card */
 .card-container {
     padding: 20px;
     border-radius: 15px;
@@ -40,10 +48,10 @@ p {
     width: 300px;
     height: auto;
     margin: 20px auto;
-
 }
 
-.card-content {
+/* Organiza o Conteúdo do card */
+.card-conteudo {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -51,16 +59,19 @@ p {
     max-width: 100%;
 }
 
-.card-title {
+/* título do card */
+.card-titulo {
     margin: 0 auto 10px auto;
     align-items: center;
 }
 
+/* Imagem do card */
 .ilustracao {
     width: 20%;
     height: auto;
 }
 
+/* campos dos inputs */
 .campo {
     display: flex;
     justify-content: space-between;
@@ -70,6 +81,7 @@ p {
     flex-wrap: wrap;
 }
 
+/* resultado da conversão */
 .resultado {
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
@@ -77,6 +89,7 @@ p {
     display: inline-block;
 }
 
+/* estiza os campos de input e select */
 input,
 select {
     padding: 5px;
@@ -84,6 +97,7 @@ select {
     height: auto;
 }
 
+/* Botão converter  */
 .botao {
     background-color: rgb(100, 183, 100);
     border: none;
@@ -95,12 +109,14 @@ select {
     padding: 5px;
 }
 
+/* Rodapé */
 footer {
     width: 100vw;
     height: auto;
     background-color: aliceblue;
 }
 
+/* links do linkedin e do github */
 .contato {
     display: flex;
     justify-content: space-between;
@@ -109,12 +125,14 @@ footer {
     padding: 10px 0 20px 20px;
 }
 
+/* Logotipo do footer */
 footer>img {
     width: 200px;
     height: auto;
     padding: 10px 0 0 20px;
 }
 
+/* estilização dos links */
 a {
     width: fit-content;
     font-size: 20px;
@@ -122,6 +140,7 @@ a {
     margin-right: 20px;
 }
 
+/* estilização dos links no estado hover */
 a:hover::before {
     content: "";
     position: absolute;
